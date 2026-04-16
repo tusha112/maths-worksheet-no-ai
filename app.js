@@ -154,11 +154,11 @@ async function handleDonate(event) {
 
   try {
     // 1. Create order on backend (switching to port 3001 to avoid conflicts)
-    const response = await fetch("https://worksheet-backend-9qi9.onrender.com/create-order", {, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount, name })
-    });
+    const response = await fetch("https://worksheet-backend-9qi9.onrender.com/create-order", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ amount, name })
+});
 
     if (!response.ok) throw new Error("Failed to create order on server");
     const orderData = await response.json();
