@@ -18,8 +18,8 @@ if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
 }
 
 const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID || 'rzp_live_SdIK88FPGdw6aN',
-  key_secret: process.env.RAZORPAY_KEY_SECRET || 'FosgFv7Kmg9qID9hYuwP6u6L',
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
 app.post('/create-order', async (req, res) => {
